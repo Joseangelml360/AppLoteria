@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="dbcensosDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>e901af50-a34b-4489-a747-6ca62944b8a4</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>dbcensosDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="IdSorteo">
+          <DataField>IdSorteo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Ejercicio">
+          <DataField>Ejercicio</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TipoSorteo">
+          <DataField>TipoSorteo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="IdAdmon">
+          <DataField>IdAdmon</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NumeroJugado">
+          <DataField>NumeroJugado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ImporteDecimo">
+          <DataField>ImporteDecimo</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ImportePapeleta">
+          <DataField>ImportePapeleta</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PapeletasImpresas">
+          <DataField>PapeletasImpresas</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PapeletasEntregadas">
+          <DataField>PapeletasEntregadas</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PapeletasDevueltas">
+          <DataField>PapeletasDevueltas</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LoteriaJugada">
+          <DataField>LoteriaJugada</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="DecimosJugados">
+          <DataField>DecimosJugados</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ImporteTotal">
+          <DataField>ImporteTotal</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="JuegaEmpresa">
+          <DataField>JuegaEmpresa</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ImportePremioPapeleta">
+          <DataField>ImportePremioPapeleta</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ImportePagado">
+          <DataField>ImportePagado</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NumeroJugado2">
+          <DataField>NumeroJugado2</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dbcensosDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\AppLoteria-En curso\Presentacion\dbcensosDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>sorteos</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>sorteosTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>dbcensosDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NumAdmon">
+          <DataField>NumAdmon</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Direccion">
+          <DataField>Direccion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodPost">
+          <DataField>CodPost</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Poblacion">
+          <DataField>Poblacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Telefono">
+          <DataField>Telefono</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mail">
+          <DataField>Mail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Responsable">
+          <DataField>Responsable</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cuenta">
+          <DataField>Cuenta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dbcensosDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\AppLoteria-En curso\Presentacion\dbcensosDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>administraciones</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>administracionesTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.03433cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.992cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.82267cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.03434cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.82267cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.78033cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.76013cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.61197cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.78033cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Numero Jugado 1</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Numero Jugado 2</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Papeletas Impresas</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox7">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Papeletas  Devueltas</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Papeletas  jugadas</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Loteria Jugada</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Juega Comisión</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox13">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Decimos Jugados</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox13</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox15">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Importe Total</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox15</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="NumeroJugado">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!NumeroJugado.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>NumeroJugado</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="NumeroJugado2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!NumeroJugado2.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>NumeroJugado2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PapeletasImpresas">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PapeletasImpresas.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PapeletasImpresas</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PapeletasImpresas1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=(Fields!PapeletasImpresas.Value-Fields!PapeletasEntregadas.Value
+-Fields!PapeletasDevueltas.Value)-(Fields!JuegaEmpresa.Value/4)</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PapeletasImpresas1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PapeletasEntregadas">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=(Fields!PapeletasEntregadas.Value-Fields!PapeletasDevueltas.Value)+
+(Fields!JuegaEmpresa.Value/4)</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PapeletasEntregadas</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="LoteriaJugada">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!LoteriaJugada.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>LoteriaJugada</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="JuegaEmpresa1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!JuegaEmpresa.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>JuegaEmpresa1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="DecimosJugados">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=iif(Parameters!ReportParameter1.Value&gt;1,
+Fields!DecimosJugados.Value*Parameters!ReportParameter1.Value,
+Fields!DecimosJugados.Value)</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>DecimosJugados</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ImporteTotal">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ImporteTotal.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ImporteTotal</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Detalles" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>2.31987cm</Top>
+            <Left>1.80705cm</Left>
+            <Height>1.2cm</Height>
+            <Width>16.63877cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="Textbox20">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Id Sorteo: " &amp; First(Fields!IdSorteo.Value, "DataSet1") &amp;
+" (" &amp; First(Fields!TipoSorteo.Value, "DataSet1") &amp; ")"</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox20</rd:DefaultName>
+            <Top>0.55966cm</Top>
+            <Left>1.09775cm</Left>
+            <Height>0.6cm</Height>
+            <Width>6.5583cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox21">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Fecha Sorteo: " &amp; First(Fields!Fecha.Value, "DataSet1")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox21</rd:DefaultName>
+            <Top>1.20256cm</Top>
+            <Left>1.09775cm</Left>
+            <Height>0.6cm</Height>
+            <Width>6.5583cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox22">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Importe papeleta: " &amp; First(Fields!ImportePapeleta.Value, "DataSet1")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox22</rd:DefaultName>
+            <Top>0.55966cm</Top>
+            <Left>14.38399cm</Left>
+            <Height>0.67789cm</Height>
+            <Width>5.0173cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox23">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Importe décimo: " &amp; First(Fields!ImporteDecimo.Value, "DataSet1")/Parameters!ReportParameter1.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox23</rd:DefaultName>
+            <Top>1.27283cm</Top>
+            <Left>14.37648cm</Left>
+            <Height>0.59548cm</Height>
+            <Width>5.0248cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox30">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="ADMINISTRACIÓN DE LOTERÍA Nº " &amp; First(Fields!NumAdmon.Value, "DataSet2") &amp;
+ " " &amp; First(Fields!Nombre.Value, "DataSet2")</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox30</rd:DefaultName>
+            <Top>4.75856cm</Top>
+            <Left>1.80705cm</Left>
+            <Height>0.4cm</Height>
+            <Width>12.82313cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox31">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="e-mail: " &amp; First(Fields!Mail.Value, "DataSet2")</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox30</rd:DefaultName>
+            <Top>6.49967cm</Top>
+            <Left>1.80705cm</Left>
+            <Height>0.4cm</Height>
+            <Width>12.82313cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox32">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Teléfono: " &amp; First(Fields!Telefono.Value, "DataSet2")</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox30</rd:DefaultName>
+            <Top>6.06439cm</Top>
+            <Left>1.80705cm</Left>
+            <Height>0.4cm</Height>
+            <Width>12.82313cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox33">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Sum(Fields!CodPost.Value, "DataSet2") &amp; ", " &amp; First(Fields!Poblacion.Value, "DataSet2")</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox30</rd:DefaultName>
+            <Top>5.62911cm</Top>
+            <Left>1.80705cm</Left>
+            <Height>0.4cm</Height>
+            <Width>12.82313cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox34">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Direccion.Value, "DataSet2")</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox30</rd:DefaultName>
+            <Top>5.19383cm</Top>
+            <Left>1.80705cm</Left>
+            <Height>0.4cm</Height>
+            <Width>12.82313cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+          </Textbox>
+          <Line Name="Line2">
+            <Top>3.91161cm</Top>
+            <Left>1.80705cm</Left>
+            <Height>0cm</Height>
+            <Width>16.63877cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+        </ReportItems>
+        <Height>2.9in</Height>
+        <Style />
+      </Body>
+      <Width>21cm</Width>
+      <Page>
+        <PageHeader>
+          <Height>3.8227cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="Image1">
+              <Source>Embedded</Source>
+              <Value>Bomboloteria</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.85937cm</Top>
+              <Left>1.05308cm</Left>
+              <Height>1.5cm</Height>
+              <Width>1.5cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="Textbox19">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>FALLA CREU COBERTA</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>DELEGACIÓN DE LOTERÍAS</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox19</rd:DefaultName>
+              <Top>1.11337cm</Top>
+              <Left>3.07325cm</Left>
+              <Height>1.246cm</Height>
+              <Width>7.41067cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Line Name="Line1">
+              <Top>3.73803cm</Top>
+              <Left>1.09775cm</Left>
+              <Height>0cm</Height>
+              <Width>18.3321cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+              </Style>
+            </Line>
+            <Textbox Name="Textbox35">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Hoja de liquidación sorteo"</Value>
+                      <Style>
+                        <FontStyle>Italic</FontStyle>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox35</rd:DefaultName>
+              <Top>2.8307cm</Top>
+              <Left>1.05308cm</Left>
+              <Height>0.6cm</Height>
+              <Width>11.21117cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox8">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=FormatDateTime(Today())</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox8</rd:DefaultName>
+              <Top>2.8307cm</Top>
+              <Left>15.48174cm</Left>
+              <Height>0.6cm</Height>
+              <Width>3.91954cm</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>0cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>0cm</TopMargin>
+        <BottomMargin>0cm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportParameter1">
+      <DataType>Integer</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>ReportParameter1</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Bomboloteria">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCACbAKUDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KK8S/ak/a28IfskeHdE1nxhp+sX9rq109nAujwxSurqm8lhJIgAx6E0Ae20V8B/wDD6X4I/wDQueOP/AC0/wDkmj/h9L8Ef+hc8cf+AFp/8k0AfflFfAf/AA+l+CP/AELnjj/wAtP/AJJo/wCH0vwR/wChc8cf+AFp/wDJ
+NAH35RXwH/w+l+CP/QueOP8AwAtP/kmj/h9L8Ef+hc8cf+AFp/8AJNAH35RXwH/w+l+CP/QueOP/AAAtP/kmj/h9L8Ef+hc8cf8AgBaf/JNAH35RXwH/AMPpfgj/ANC544/8ALT/AOSaP+H0vwR/6Fzxx/4AWn/yTQB9+UV8B/8AD6X4I/8AQueOP/AC0/8Akmj/AIfS/BH/AKFzxx/4AWn/AMk0AfflFfAf/D6X4I/9C544/wDAC0/+SaP+H0vwR/6Fzxx/4AWn/wAk0AfflFfAf/D6X4I/9C544/8AAC0/+SaP+H0vwR/6Fzxx/wCAFp/8k0AfflFfAsf/AAWh+CUsiovhzxxuYgD/AEC0/wDkmvvkHIzQAtFFFABX5tf8Fu/+SRfDj/sOTf8ApOa/SWvza/4Ld/8AJIvhx/2HJv8A0nNAH5A2trNfXUNtbQyXFxM4jihiUs7sTgKoHJJJwAK6b/hUvjn/AKEzxD/4K5//AIiuj/Zb/wCTmvhF/wBjfpH/AKWxV/S1QB/MF/wqXxz/ANCZ4h/8Fc//AMRR/wAKl8c/9CZ4h/8ABXP/APEV/T7RQB/MF/wqXxz/ANCZ4h/8Fc//AMRR/wAKl8c/9CZ4h/8ABXP/APEV/T7RQB/MF/wqXxz/ANCZ4h/8Fc//AMRR/wAKl8c/9CZ4h/8ABXP/APEV/T7RQB/MF/wqXxz/ANCZ4h/8Fc//AMRR/wAKl8c/9CZ4h/8ABXP/APEV/T7RQB/MF/wqXxz/ANCZ4h/8Fc//AMRR/wAKl8c/9CZ4h/8ABXP/APEV/T7RQB/MF/wqXxz/ANCZ4h/8Fc//AMRR/wAKl8c/9CZ4h/8ABXP/APEV/T7RQB/MF/wqXxz/ANCZ4h/8Fc//AMRVHWfAXibw7Z/a9V8O6tplpuCefeWMsMe49BuZQM1/UXXxJ/wWA/5M7uf+w7Y/+z0AfhxZf8fkH/XRf51/VCv3R9K/lesv+PyD/rov86/qhX7o+lAC
+0UUUAFfm1/wW7/5JF8OP+w5N/wCk5r9Ja/Nr/gt3/wAki+HH/Ycm/wDSc0AfmV+y3/yc18Iv+xv0j/0tir+lqv5pf2W/+TmvhF/2N+kf+lsVf0tUAFFFFABRRXm3xE+K2reGGktPD/gvW/Ed8vBlSzlS2Q/7+3L/APARj3rSnTlVlyxHuek013WNcswUepOK+NvFXjL47eKncHStd0q3bpBpmnyQAf8AAwN//j1ed6h8NviPq0vmX3h3xHeyf37i2mkP5kV7NPK0179WK/H/ACLUPM/QlLyCVtqTxu3orgmpq/OYfCDxyDkeEdbB/wCvGT/Cui0PRvjF4adG0yx8WWYXpGkM+z8UI2n8RVyyqFvdrL+vmHJ5n3vRXzR4I+Mnxa0l44fEngTVNbteA08OnvBcD34XY30wPrX0H4d15PEempdpZ31gTw1vqNq8EqH0IYc/UEj3rya+GnQfvWa7p3IasalFFFcogr4k/wCCwH/Jndz/ANh2x/8AZ6+26+JP+CwH/Jndz/2HbH/2egD8OLL/AI/IP+ui/wA6/qhX7o+lfyvWX/H5B/10X+df1Qr90fSgBaKKKACvza/4Ld/8ki+HH/Ycm/8ASc1+ktfm1/wW7/5JF8OP+w5N/wCk5oA/Mr9lv/k5r4Rf9jfpH/pbFX9LVfzS/st/8nNfCL/sb9I/9LYq/paoAKz9e16w8MaRdapqdylnY2yF5ZpDwB/UnoAOSavkgDJ4FfDv7SHxmk+IniJ9J02c/wDCO6dIVj2Hi5lHBlPqOoX257134PCyxdTlWy3ZUVdnoGnftFeNvid8Q00bwVZWlnYSN8r3kJkZIgfmmkIOB9B7DJJr0H49fGib4SeHrCys5Yb3xNdgFWlT5UQfelZQe54A+vXFH7Ovw2g+GXw//tXUVWHVNRiF3dySDBhiAyqe2Byfcn0FfKHjTxFffGP4pS3CFi+p3iWlnG3/ACzjLBI1x9CCfck169KhQxGIahFKnD8X5lpJ
+vyPsf4CeKfE/jjwX/b3iRrcG7lP2SKCHy8RLwWPPOWz+AHrXkK/tLeKdW+MUXh/TTZDRZtYSxjJg3OYvNCFt2epGT+Ne/wCtPbfDn4Z3xs18u30bS38lR/0ziO38SQPzr4g+Adv9s+MnhZW+Yi78zn/ZVm/pWWEpUqyrV3FWWyFFJ3Z9fftAeOdZ+HfgH+2dEaAXKXccb/aI967GDA8ZHOdtZf7OPxb1D4qeH9UbVzB/adjchWFumxTEy5Q4yecq4/Cpf2pbfz/gnrjYyYpLd/8AyOg/rXhv7G2uNY/ETUdNLYiv7Bjj1eNlI/8AHS9Y0aEKmAnO3vJ7/cCV43Os8aftCeMfhh8VptG1uO0vNDinD5it9ksls/3WU5+8AfoSpFem/F3xT4r07wZB4p8DXNpfWKQi4ngkg8wvCRkSocjoOSPTntz51+2h4QWfSdE8TRR/vbeQ2M7AclGBZCfYEMP+B1a/Y9+IB1jw/f8AhO9k8ybT/wB/ahzkmBj8y/RWP/j49K1lTpyw0MVCKvHSS6P+v1C2lze+BH7Rlv8AEdl0XXBDY+IgCYzH8sV2Bz8oPRgOq9+o7ge318IftA/DmT4UfENbrSt9rpt632ywkiO0wODlkUjptbBHoGWvp74AfF1fin4T/wBLZV12w2xXiDjzP7soHo2Dn0IPbFY43CQUFiaHwPp2FJdUeo18Sf8ABYD/AJM7uf8AsO2P/s9fbdfEn/BYD/kzu5/7Dtj/AOz14pB+HFl/x+Qf9dF/nX9UK/dH0r+V6y/4/IP+ui/zr+qFfuj6UALRRRQAV+bX/Bbv/kkXw4/7Dk3/AKTmv0lr82v+C3f/ACSL4cf9hyb/ANJzQB+ZX7Lf/JzXwi/7G/SP/S2Kv6Wq/ml/Zb/5Oa+EX/Y36R/6WxV/S1QB5B+098Q38D/DqW1tJfL1LWGNpEVOGSPH71x/wH5c9i4r5V+BPgpfHnxP0fT5o/Mson+13QPIMcfzYPsx2r/wKux/
+a78TtrPxQXTFfMGk2qRbewkceYx/JkH/AAGuw/Yo0ANceJtbdBlVis4n78ku4/SOvraS+p5e6i3kvz0Rsvdjc9Q/ad8VHwv8I9TSJ9lxqTLYR/R8l/8AxxXH418z/su6CNc+MelOw3R2Ect4wI/urtX8mdT+Femfts6w3/FLaUrfIfPupF9T8qqf/Q6yv2KdOWXxR4kvyMtBZxwA+gd8n/0WKzoL2OWzn1lf/IS0ie0/tL6m2mfBbxCyHDzLFAPo0qBv/Hc18rfszRed8bvDY67Wnb8reSvoj9sG9+zfCeKIHH2jUoY/yV2/9lrwP9laLzPjVpDf3Ibhv/ILD+tGCXLl9V97/kEfhZ9T/tEQC4+C/ihCM4gR/wDvmVG/pXyJ+zrqJ0z4z+GZN20STvAfffGyY/Mivsf45p5nwh8WD/pwc/lzXwt8Mro2XxH8LTg42apakn281c/pRli58JVj6/kEfhZ9yfHrQV8RfCLxNbFSzxWpukx13REScf8AfOPxr41+A3ipvCHxW0C7LlIJ5xZz+hSX5OfYEq3/AAGv0A1OyXUdNu7RxlJ4niYH0YEf1r8xAZLS4yCY5om4I6qwNLKbVaNWi9v81/wAhqmj7s/aa8FL4v8AhXqEyJuvNK/0+E99qj94P++Cx+oFfJHwX+IEnw3+IOm6oXK2Lt9nvV7NCxAY/wDAeGHutffOkXUPinwrZXMiiS31GySRl7MsiAkfka/NvXtKfQtc1HTZDl7O5kt2PqUYqf5VWVNVaVTDT2/zCGqaP05Vg6hlIZSMgjoRXxL/AMFgP+TO7n/sO2P/ALPX0z8AvEzeK/hL4eu5WL3EUH2SUscktESmT7kKD+NfM3/BYD/kzu5/7Dtj/wCz18zUg6c3B9HYy2Pw4sv+PyD/AK6L/Ov6oV+6PpX8r1l/x+Qf9dF/nX9UK/dH0rMBaKKKACvza/4Ld/8AJIvhx/2HJv8A0nNfpLX5tf8ABbv/AJJF8OP+w5N/6Tmg
+D8yv2W/+TmvhF/2N+kf+lsVf0tV/NL+y3/yc18Iv+xv0j/0tir+lqgD4++J/7O3j7xh8Qdf1i2sLZ7W7u3eFmu0BMYOEJBPHygcV7T+zd8ONW+Gngq+sNbhjgvri/efbHIHGzy0Ucj3Vq47xn+1z/wAIf4r1bRJPCbTtYXL2/nf2ht8wKcBseWcZGDjJ616b8G/imnxc8L3GsLp50ww3bWpgM3m9ERt2dq9d/p2r3cTPGPDKNWKUNP8AgdTR81tTy39pL4M+LviX4y0+90S0hnsbewWEtJcLGRJ5jluCfQrzW5+zH8J9f+GEXiI69bRW8l61v5XlTLJkJ5mc46ffFXfjL+0T/wAKi8TW2kN4fOqCe0W6E4u/Kxl3XbjY3TZnOe9a/wAEvjWnxjh1d10g6SdPaIFTcedv3h+furjGz9aic8X9T5XFez01+fr38ha8vkUv2k/h5rnxJ8Hadp2hQRz3EN+tw6ySrGAojdc5Puwrzf4B/ATxf4B+JFprGs2cENjHBKheO5RzllwOAc17H8Z/iuPhD4es9UOlnVRcXQtvKE/lbcozZztbP3envXG/Cj9ptfif4yg0EeHTpplikk883vm42rnG3yx1+tFGeLWElGEVya3f59f0BXsemfEvQ7vxN8P/ABBpViiyXl5ZyQwqzBQWIwMk9K+TfDn7L/xB0vxDpd7Lp9qIra6imYi8jJAVwT39q+vvGniQeD/Cera2bf7ULC2e48jfs37RnG7Bx+VeBaR+2cuq6tZWQ8ItGbmdIQ/9o527mAzjyuetGCnio05KhFNdf6ugje2h9L18S67+yz4+u9b1Ce2061NvLcSPETeRg7SxI4z6V9tV80at+2fHpeq3tmPCRmFvM8IkGo43bWIzjyuM4rPL5YmLl9Win3/q6CN+h7n8N9IvfD/gHw/pmooI76ysYreVVYMAyqF4I69K+Yfib+zR408QfEDX9T0qwtnsLy8kuIma6RSdx3E4J45Jr6o8F+Ij
+4u8J6TrZtvsf2+2S48jfv2BhkDdgZ/KvFPHX7W0fgzxfquhjwyb77BOYDcC+2byOp2+Wcc+9PBzxUa03RinLr9/qEb30Ou/Zw8Ca/wDDvwTeaTr8McMxvnnhWOVZBsZEHUdOVP5189/8FgP+TO7n/sO2P/s9fTnwZ+Kp+Lvhy71YaUdKSC6NqIzP5u8hFYnO1cffAr5j/wCCwH/Jndz/ANh2x/8AZ64cS5utJ1VaXUl76n4cWX/H5B/10X+df1Qr90fSv5XrL/j8g/66L/Ov6oV+6PpXMIWiiigAr82v+C3f/JIvhx/2HJv/AEnNfpLX5tf8Fu/+SRfDj/sOTf8ApOaAPzK/Zb/5Oa+EX/Y36R/6WxV/S1X80v7Lf/JzXwi/7G/SP/S2Kv6WqAPhT9qjw+2ifGDUZ8ERajDFdpx/s7G/8eRj+Neo/sT60r6V4m0gnDRTRXaj1DKVb8ti/nW3+1/4EfXfBtn4htYy9xpDlZgo5MD4BP8AwFgp9gWNeH/sw+MF8J/FiwjmfZa6ojWEhJwAzEGM/wDfaqP+BGvrk/reWtLeK/L/AIBtvE7/APbZ0spq/hfUQvEsE1uW/wB1lYD/AMfNJ+xLehNY8VWZPzSwQSgf7rOD/wChivRf2t/DLa38KzfRKWl0q6juDgZPltmNv/QlP/Aa8K/ZK1tdK+L0Fs7bRqNnNbD0yAJB/wCi/wBaypP22WSiul/wdxLWB7V+2PaGf4WWUoH+o1SJz9DHKv8AUV4X+ynIE+NGlD+/BcL/AOQmP9K+kv2pLA33wW1plXc1vJBNj6SqD+jGvmL9mKXyvjd4c/2vtC/nbyU8E+bLqi7c35XCPws+vvjg/l/CLxYf+ofIPzGK+D/h3Abr4geGYQM+Zqdqn5yqK+5v2gZvI+DXils4zahfzdR/Wvjf4Caf/afxi8Kw4ztvBNj/AK5qX/8AZaWWPlwtWXr+QQ2Z+g1zOttbyzOcJGpdj7AZr8wLu4a8upp3+/K7
+OfqTmv0T+L+tjw78MPE99vCOlhKkbHs7jYn/AI8wr4R+FXhk+L/iL4e0nZvjnu0MoI/5Zqd7/wDjqtSye1OnUqvb/LUIaJs/QPwXpY8P+DND09vl+x2EELZ7bYwD/Kvzq8ZawPEPi/W9UUlkvb6a4Un0Zyw/Q195fHTxgvgn4Xa5fCTZczQm0tsHnzJPlBH0BLf8Br4T8B+Ebnx34v0vQrUHfeTBGcD/AFadXf8ABQT+FVlK5Y1MRPb+mwh1Z9rfsy+H28P/AAd0bzF2TXxkvWHqHb5D+KBK+eP+CwH/ACZ3c/8AYdsf/Z6+07Cxg0yxtrO2QRW9vGsUSDoqqMAfkK+LP+CwH/Jndz/2HbH/ANnr5qtU9rUlUfV3M3qfhxZf8fkH/XRf51/VCv3R9K/lesv+PyD/AK6L/Ov6oV+6PpWQhaKKKACvza/4Ld/8ki+HH/Ycm/8ASc1+ktfm1/wW7/5JF8OP+w5N/wCk5oA/Mr9lv/k5r4Rf9jfpH/pbFX9LVfzS/st/8nNfCL/sb9I/9LYq/paoAr39hb6pY3FndxLPa3EbRSxOMq6MMEH6g1+ffxc+G1/8I/G0lmGk+xs32jT7wcF0zkc/3lOAffB6EV+hlcn8S/hvpXxQ8NS6TqS7GHz290gy9vJjhh/UdxXp4DGfVanvfC9/8yoysYnw68V2Hxv+FJ+1bWkurd7DUYV6pJt2sQO2QQw+o9K+LbE33wk+KNubtWW60TUV80KMb1VucezL09mr0/4f2Hjj9nj4jzW0+iX+q6NORHdHT7d5o5osnbKhA4ZeTg89QcZzXaftQ/CSXxdZWfjTw7aS3V15aR3dtFE3myxn7kgTG7cucEYzjH92vXoOnha7p3vTqbf5f15Fqyduh7V8SNNXxZ8MfEFrbETC702VoCOQx2FkP5gV8T/s9XAtvjN4WcnGbhk/76jdf619Xfs367qeqfDe20zWtPvLG/0r/RMXlu8Xmw4/dsNwGcL8v/Afevm/
+R/h1r3gj48WKwaJqD6bZa5GEuY7WRovI80YbcBjGw8/jWWCtSjXw0n0dvy/yCOl0fSX7T9x5HwS8QDODIbdB/wB/4/8ACvnn9kLRTqPxXN4Uymn2Ms27sGbEY/R2/I171+1Ra3+ofCp7PTrK5v57i9hUxWsLSMFG5iSFBOPlHPuK5n9kDwJfeHNE17VdTsbiwurydLeOK6iMb7EGS2CAcEvj/gNZUKipZdU11b/OyEnaLJv2x/FS6Z4E0/Q43An1S6Duv/TKL5j/AOPmP8jXJ/saeA2lvdU8W3MZEUS/YrQkdWODIw+g2jP+01YHxh0TxV8Z/jJ9lstG1CHTYnFha3NxayJCsakl5SxGME7jnuAo64r2b4gavcfBX4aWPhrwdpN9qGqGDyYJLW1eUQ/353KgjcSSQPU+grR/usLDCwfvz1fl6/l94bKx4x+1t8S08TeKoPDVjKHsNIJM7Kch7kjBH/AB8v1LV6b+yp8IX8J6K/ijVYDHqmpRhbaJx80Nuecn0L8H6AeprjfgF+zhd6pfxeKPGdtJHAr+bb6ddA+ZO+c75QeQuedp5bvx1+sAMCssZiIUaSwdB3S3f9f10CTsuVC18Sf8FgP+TO7n/sO2P/s9fbdfEn/BYD/kzu5/7Dtj/wCz14BmfhxZf8fkH/XRf51/VCv3R9K/lesv+PyD/rov86/qhX7o+lAC0UUUAFfm1/wW7/5JF8OP+w5N/wCk5r9Ja+Ov+ClH7K/jf9qrwH4P0bwQNO+16XqUt3cHUrkwJsMWwYIVsnJ9KAPw48CeML34eeOPDvirTEgl1HQ9Rt9TtkuVLRNLDKsiBwCCV3KMgEHHcV9tf8Pofjp/0AfAv/gtu/8A5KrK/wCHO/x/9fCv/g1b/wCNUf8ADnf4/wDr4V/8Grf/ABqgDV/4fQ/HT/oA+Bf/AAW3f/yVX2L/AME4f25PH/7XHijxrp3jPT9AsoNFs7e4tzo1rNCzNI7q28ySvkYUYxiviX/h
+zv8AH/18K/8Ag1b/AONV9nf8E0/2KfiN+yl4r8b3/jgaSbfWLK3gtjpl4Zzujkdm3AquOGGOtAH3zXm/xFuvifpDSXXhOLQ9ZtBz9juYJEuV+jeaFf8A8dPsa9IorSnP2cr2T9Rnx9rX7VXxL8OXhtdV0DTNOuR/yyurGeNj7jMnI96z/wDhsrxx/wA+Gh/+A0v/AMdr7I1DTLPVrdre+tILyBusVxGJFP4EYr4p/av8M6T4W+IlhbaPp1tplvLpkczw2sQjQuZZQWwOM4UflX0WDqYXFT9m6KTNI2eli9/w2V44/wCfDQ//AAGl/wDjtH/DZXjj/nw0P/wGl/8AjteEV98fA7wL4dtfh14Z1OLQ9PXUZ7CKWS7+zIZWYqCTuIzXZjIYTCQUnSTuVK0eh5x4J+Lvxp8fPGdN8MaTFaPj/Tby1mhgA9Qxk+b/AICDX0J4eh1eHTUGuXVndageXaxgaKJfYBmYn65GfQVp0V8vXrRqv3YKK8jFu5W1G4a00+6nTBeOJnXPTIBNfit/w+h+On/QB8C/+C27/wDkqv2p1KB7rTrqGMAvJE6KD6kECvxB/wCHO/x/9fCv/g1b/wCNVyiNX/h9D8dP+gD4F/8ABbd//JVeYftF/wDBRv4nftO/Dh/BXizS/DFppL3cV4ZNJs54pt8edo3PO4x8xzxXdf8ADnf4/wDr4V/8Grf/ABqj/hzv8f8A18K/+DVv/jVAHxJZf8fkH/XRf51/VCv3R9K/D23/AOCPfx+iuInP/CLYVgxxqrdj/wBcq/cJRgCgBaKKKACisDRNTuby9Mc0u9NhONoHp6Ct+m1bQSdwooopDCiiigAooooAK8I+PH7PerfFjxbZ6tYanZWUMNklqY7gOWLB3bPAPHzj8q93orejXnh589N6jTtsfIH/AAxX4j/6D+l/98yf/E19QeAvDs3hLwXoui3EqTzWFrHbvJHnaxUYyM84rforavjK2JSjUew3JvcKKKK4iQoo
+ooAKKKKACiiigAooooA//9k=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>7550f388-ee86-4854-8956-91cc6ffcc95d</rd:ReportID>
+</Report>

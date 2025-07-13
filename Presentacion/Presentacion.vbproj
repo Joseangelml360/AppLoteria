@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FE1BD4F-15EB-4714-B26A-5503A529F304}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Presentacion.My.MyApplication</StartupObject>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Lotería</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\LoteriaInstaller\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Lotería.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Lotería.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Admon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>99ADE19BC9B1A0D7D121B9C61EF6A7B89D266630</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Presentacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942" />
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.6.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.31.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.31.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.6\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.3.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.EntityFramework.9.3.0\lib\net462\MySql.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.9.0.6\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.9.0.6\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.6\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    <Reference Include="ZstdSharp, Version=0.8.5.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.5\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbcensosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbcensosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAdministraciones.Designer.vb">
+      <DependentUpon>FrmAdministraciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAdministraciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDetallesAdmon.Designer.vb">
+      <DependentUpon>FrmDetallesAdmon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDetallesAdmon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLiquidacion.Designer.vb">
+      <DependentUpon>FrmLiquidacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLiquidacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSorteos.Designer.vb">
+      <DependentUpon>FrmSorteos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSorteos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTipoSorteo.Designer.vb">
+      <DependentUpon>FrmTipoSorteo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTipoSorteo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmVendedores.Designer.vb">
+      <DependentUpon>FrmVendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmVendedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDetalleVentasLoteria.Designer.vb">
+      <DependentUpon>FrmDetalleVentasLoteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDetalleVentasLoteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCalcularSorteo.Designer.vb">
+      <DependentUpon>FrmCalcularSorteo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCalcularSorteo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLibroCaja.Designer.vb">
+      <DependentUpon>FrmLibroCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLibroCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDetalleSorteoVendedor.Designer.vb">
+      <DependentUpon>FrmDetalleSorteoVendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDetalleSorteoVendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loteriaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loteriaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loteriaDataSet.vb">
+      <DependentUpon>loteriaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\FrmHojaLiquidacionSorteo.Designer.vb">
+      <DependentUpon>FrmHojaLiquidacionSorteo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmHojaLiquidacionSorteo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmInformePagosAdmon.Designer.vb">
+      <DependentUpon>FrmInformePagosAdmon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmInformePagosAdmon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmInformeVendedorSorteo.Designer.vb">
+      <DependentUpon>FrmInformeVendedorSorteo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmInformeVendedorSorteo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\InformeVendedores.Designer.vb">
+      <DependentUpon>InformeVendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InformeVendedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAdministraciones.resx">
+      <DependentUpon>FrmAdministraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDetallesAdmon.resx">
+      <DependentUpon>FrmDetallesAdmon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLiquidacion.resx">
+      <DependentUpon>FrmLiquidacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSorteos.resx">
+      <DependentUpon>FrmSorteos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTipoSorteo.resx">
+      <DependentUpon>FrmTipoSorteo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmVendedores.resx">
+      <DependentUpon>FrmVendedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDetalleVentasLoteria.resx">
+      <DependentUpon>FrmDetalleVentasLoteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCalcularSorteo.resx">
+      <DependentUpon>FrmCalcularSorteo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLibroCaja.resx">
+      <DependentUpon>FrmLibroCaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDetalleSorteoVendedor.resx">
+      <DependentUpon>FrmDetalleSorteoVendedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmHojaLiquidacionSorteo.resx">
+      <DependentUpon>FrmHojaLiquidacionSorteo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmInformePagosAdmon.resx">
+      <DependentUpon>FrmInformePagosAdmon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmInformeVendedorSorteo.resx">
+      <DependentUpon>FrmInformeVendedorSorteo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InformeVendedores.resx">
+      <DependentUpon>InformeVendedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptHojaLiquidacionSorteo.rdlc" />
+    <EmbeddedResource Include="Reports\RptListaVendedores.rdlc" />
+    <EmbeddedResource Include="Reports\RptPagosAdmon.rdlc" />
+    <EmbeddedResource Include="Reports\RptResumenPagosAdmon.rdlc" />
+    <EmbeddedResource Include="Reports\RptVendedorSorteo.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbcensosDataSet.xsc">
+      <DependentUpon>dbcensosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbcensosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbcensosDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbcensosDataSet.xss">
+      <DependentUpon>dbcensosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="loteriaDataSet.xsc">
+      <DependentUpon>loteriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="loteriaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loteriaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loteriaDataSet.xss">
+      <DependentUpon>loteriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Datos.AdmonDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.CensoFalleroDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.ConexionDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.DataSet1+detallesadmonDataTable.datasource" />
+    <None Include="My Project\DataSources\Datos.DataSet1.datasource" />
+    <None Include="My Project\DataSources\Datos.DataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\Datos.DataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\Datos.DataSet1TableAdapters.vendedoresTableAdapter.datasource" />
+    <None Include="My Project\DataSources\Datos.DetallesAdmonDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.DetallesSorteoVendedorDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.DetalleVentasLoteriaDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.EjercicioActivoDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.LibroDiarioDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.LiquidacionDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.LoteriaDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.SorteosDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.TipoSorteosDatos.datasource" />
+    <None Include="My Project\DataSources\Datos.VendedoresDatos.datasource" />
+    <None Include="My Project\DataSources\loteriaDataSet.detallesadmonDataTable.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.vbproj">
+      <Project>{0a89aaf5-94c7-4499-8096-f0ac0de3ae85}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.vbproj">
+      <Project>{A30BB4F7-74ED-49A9-A827-BE5DD37621FF}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion_TemporaryKey.pfx" />
+    <None Include="Resources\Bombo loteria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\InsertFila1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luzverde.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_row_delete1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_green16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculadora.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modificar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contabilidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banco24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hoja Contable24x24.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caja fuerte24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentoAzul.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Añadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decimo loteria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filtro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario48x48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
